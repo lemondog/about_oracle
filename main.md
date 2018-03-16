@@ -3,7 +3,7 @@ SQL语句，执行计划以及解析树都放在共享池的库缓冲区中，�
 
 重做日志缓冲区使用1/3或者间隔3秒刷新到重做日志。从10G开始，只要缓冲区使用到1MB时LGWR就开始刷新。
 
-默认最大sessions数量：```<1.1\*processes+5>```
+默认最大sessions数量：```<1.1*processes+5>```
 
 truncate表后，表object_id不变，但data_object_id会变化，即段的id会发生变化。
 
