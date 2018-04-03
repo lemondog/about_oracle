@@ -8,3 +8,11 @@ SQL语句，执行计划以及解析树都放在共享池的库缓冲区中，�
 truncate表后，表object_id不变，但data_object_id会变化，即段的id会发生变化。
 
 删除后的回滚不改变原来行的位置
+
+- logminer使用流程：
+```
+execute dbms_logmnr_d.build('dic.ora','/tmp'); 
+execute dbms_logmnr.add_logfile('/u01/app/oracle/log_3_3.log');
+execute dbms_logmnr.start_logmnr('/tmp/dic.ora');
+execute dbms_logmnr.add_logfile('/u01/app/oracle/log_3_3.log',options=>dbms_logmnr.removefile);
+```
