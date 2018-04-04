@@ -16,3 +16,4 @@ execute dbms_logmnr.add_logfile('/u01/app/oracle/log_3_3.log');
 execute dbms_logmnr.start_logmnr('/tmp/dic.ora');
 execute dbms_logmnr.add_logfile('/u01/app/oracle/log_3_3.log',options=>dbms_logmnr.removefile);
 ```
+- oracle启动参数文件寻找顺序:`spfileSID->SPFILE->initSID->默认PFILE`
